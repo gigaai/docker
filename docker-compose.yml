@@ -17,6 +17,8 @@ phpfpm:
   build: ./.docker/php
   ports:
     - "9000:9000"
+  links:
+    - mysql
   volumes:
     - .:/var/www/html
 
